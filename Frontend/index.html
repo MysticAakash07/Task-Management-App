@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+<body class="day-mode">
+    <header>
+        Task Management App
+        <span class="mode-toggle">
+            <button id="dayButton"> ☀️</button>
+            <button id="nightButton"> 🌙</button>
+        </span>
+    </header>
+    <main>
+        <section class="addTask">
+            <input type="text" id="taskTitle" placeholder="Task title...">
+            <input type="text" id="taskDescription" placeholder="Task description...">
+            <input type="date" id="taskDueDate">
+            <button id="addButton">Add</button>
+        </section>
+        <section class="tasks-section">
+            <div class="task-buttons">
+                <button id="currentTasksBtn" class="tablinks" onclick="openTab(event, 'currentTasks')">To Do</button>
+                <button id="completedTasksBtn" class="tablinks" onclick="openTab(event, 'completedTasks')">Completed</button>
+            </div>
+            <div id="currentTasks" class="task-content">
+                <ol id="currentTasksList"></ol>
+            </div>
+            <div id="completedTasks" class="task-content">
+                <ol id="completedTasksList"></ol>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

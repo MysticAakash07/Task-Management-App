@@ -1,0 +1,182 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    background-color: #ffffff; /* Default background color */
+    color: black; /* Default text color */
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items horizontally */
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center; 
+    padding: 20px; 
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Day and Night Mode Styles */
+.day-mode {
+    background-color: #ffffff; 
+    color: #000000; 
+}
+
+.night-mode {
+    background-color: #000000; 
+    color: #ffffff; 
+}
+
+.day-mode li {
+    background-color: white;
+    color: black;
+}
+
+.night-mode li {
+    background-color: black;
+    color: white;
+}
+
+/* Mode Toggle Button Styles */
+.mode-toggle {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+}
+
+.mode-toggle button {
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid aqua;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mode-toggle button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Input Field Styles */
+input[type="text"], input[type="date"], textarea {
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Add Button Styles */
+#addButton, #updateButton, #cancelButton, #editButton {
+    font-size: 1.6rem;
+    padding: 11px 20px;
+    margin: 10px 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addButton:hover, #updateButton:hover, #cancelButton:hover, #editButton:hover {
+    background-color: hsl(123, 95%, 46%);
+}
+
+/* Tasks Section Styles */
+.tasks-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Task Buttons Styles */
+.task-buttons {
+    margin-bottom: 20px;
+}
+
+.task-buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task-buttons button:hover {
+    background-color: hsl(123, 95%, 46%);
+}
+
+/* Task Content Styles */
+.task-content {
+    display: none;
+    width: 100%;
+}
+
+.task-content.active {
+    display: block;
+}
+
+/* List Item Styles */
+li {
+    border: 2px solid aqua;
+    font-size: 1.6rem;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+/* Button Styles */
+.completeButton, .deleteButton, #currentTasksBtn, #completedTasksBtn {
+    font-size: 1.5rem;
+    padding: 8px 16px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.completeButton {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.deleteButton {
+    background-color: hsl(4, 90%, 80%);
+    color: white;
+}
+
+.task-details, .edit-task {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.task-details.active, .edit-task.active {
+    display: flex;
+}
